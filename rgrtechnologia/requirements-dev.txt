@@ -1,0 +1,3 @@
+ipdb
+coverage
+pytest
