@@ -4,9 +4,4 @@ services:
   pagescrap:
     build: .
     restart: always
-    container_name: "app.novobagui"
-    volumes:
-    - .:/app
-
-volumes:
-  db-data:
+    container_name: "app.pagescrap"
