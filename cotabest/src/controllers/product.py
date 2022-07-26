@@ -8,11 +8,10 @@ bp = Blueprint("product", __name__, url_prefix="/api/v1/products")
 @bp.route("/", methods=["POST"])
 def post_product():
     """
-    Create a new user
+    Endpoint created only to register the initial products in the base
     ---
-    responses:
-      201:
-        description: User created
+    tags:
+        - Product
     """
     create_product(request)
 
@@ -22,11 +21,20 @@ def post_product():
 @bp.route("/", methods=["GET"])
 def get_search_products():
     """
-    Get search products for names
+    Search products for names
     ---
+    tags:
+        - Product
+    parameters:
+      - name: name
+        in: query
+        description: Name or part name that will search for the product
+        required: true
     responses:
       200:
         description: Products found
+      404:
+        description: Products not found
     """
     name = request.args.get("name")
     products = search_product(name)

@@ -21,5 +21,7 @@ def get_all_products():
 
 
 def search_product(name):
-    product = Product.query.filter(Product.name.ilike(f"%{name}%")).all()
+    product = get_all_or_404(
+        Product.query.filter(Product.name.ilike(f"%{name}%")).all()
+    )
     return products_schema.dump(product)

@@ -16,7 +16,7 @@ def create_sales_order(username):
 
     sales_order = {
         "id": str(uuid.uuid4()),
-        "total-price": total,
+        "total-price": float(format(total, ".2f")),
         "items": carts_schema.dump(cart),
     }
     for item in cart:

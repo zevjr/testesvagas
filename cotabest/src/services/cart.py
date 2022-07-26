@@ -1,12 +1,16 @@
 from flask import abort
-from ..models import Cart, User, cart_schema, carts_schema,Product
-from ..utils import search_or_create
+
+from ..models import Cart, Product, User, cart_schema, carts_schema
+from ..utils import get_all_or_404, search_or_create
 
 
 def create_cart(cart):
     user = search_or_create(cart["username"], User)
     product = Product.query.get_or_404(cart["product_id"])
-    if  cart["amount"] < product.amount_per_package:
+    if (
+        cart["amount"] < product.amount_per_package
+        or cart["amount"] % product.amount_per_package
+    ):
         raise abort(
             406,
             f"This product: {product.name} is above the amount per package",
@@ -28,7 +32,9 @@ def get_cart_by_user(username):
     user = User.query.filter_by(username=username).first_or_404(
         f"User not found: {username}"
     )
-    return Cart.query.filter_by(user_id=user.id).all()
+    return get_all_or_404(
+        Cart.query.filter_by(user_id=user.id).all(), f"{username}, Does not have cards"
+    )
 
 
 def update_cart(cart):
