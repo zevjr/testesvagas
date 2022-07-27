@@ -15,7 +15,7 @@ def post_product():
     """
     create_product(request)
 
-    return jsonify({"message": "User created"}), 201
+    return jsonify({"message": "Product created"}), 201
 
 
 @bp.route("/", methods=["GET"])

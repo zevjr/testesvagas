@@ -29,7 +29,7 @@ def validate_sales_order(sales_order):
     if sales_order.amount < sales_order.product.minimun:
         raise abort(
             406,
-            f"This product: {sales_order.product.name} is bellow the minimun amount, the minimun amount is: {sales_order.product.minimun}"
+            f"This product: {sales_order.product.name} is bellow the minimun amount, the minimun amount is: {sales_order.product.minimun}",
         )
     if sales_order.amount > sales_order.product.max_availability:
         raise abort(
