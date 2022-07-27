@@ -1,7 +1,8 @@
 from flask_swagger_ui import get_swaggerui_blueprint
+import os
 
 SWAGGER_URL = "/api/docs"
-API_URL = "http://127.0.0.1:5000/spec"
+API_URL = os.getenv("SWAGGER_URL")+"/spec"
 
 
 swaggerui_blueprint = get_swaggerui_blueprint(

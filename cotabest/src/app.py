@@ -5,12 +5,13 @@ from flask_swagger import swagger
 
 from .config import config_app
 from .controllers import cart_bp, product_bp, sales_bp
+from .utils import bp as utils_bp
 from .db import db, ma, migrate
 from .models import *
 from .swagger import swaggerui_blueprint
 
 
-def create_app():
+def create_app(*args, **kwargs):
     app = Flask(__name__)
     app = config_app(app)
 
@@ -21,6 +22,7 @@ def create_app():
     app.register_blueprint(product_bp)
     app.register_blueprint(cart_bp)
     app.register_blueprint(sales_bp)
+    app.register_blueprint(utils_bp)
 
     app.register_blueprint(swaggerui_blueprint)
 
