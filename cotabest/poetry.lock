@@ -108,7 +108,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "executing"
-version = "0.9.0"
+version = "0.9.1"
 description = "Get the currently executing AST node of a frame, and other information"
 category = "dev"
 optional = false
@@ -390,19 +390,6 @@ python-versions = ">=3.5"
 traitlets = "*"
 
 [[package]]
-name = "mock"
-version = "4.0.3"
-description = "Rolling backport of unittest.mock for all Pythons"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-build = ["twine", "wheel", "blurb"]
-docs = ["sphinx"]
-test = ["pytest (<5.4)", "pytest-cov"]
-
-[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
@@ -566,20 +553,6 @@ Werkzeug = ">=0.7"
 docs = ["sphinx-rtd-theme", "sphinx"]
 
 [[package]]
-name = "pytest-mock"
-version = "3.8.2"
-description = "Thin-wrapper around the mock package for easier use with pytest"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-pytest = ">=5.0"
-
-[package.extras]
-dev = ["pre-commit", "tox", "pytest-asyncio"]
-
-[[package]]
 name = "python-dotenv"
 version = "0.20.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -706,7 +679,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "89948489c7485faa99baca686f29d2573340bf18001e323e3b8413d63646e382"
+content-hash = "1283b2259d0484e8a1787ce20d3906422a791c51953c0e0fb16149ea2ce90cc4"
 
 [metadata.files]
 alembic = [
@@ -788,8 +761,8 @@ decorator = [
     {file = "decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"},
 ]
 executing = [
-    {file = "executing-0.9.0-py2.py3-none-any.whl", hash = "sha256:d07e9a46c85dd507055f7c4c208689faef1bf6a671ae81e91787f307808bacfb"},
-    {file = "executing-0.9.0.tar.gz", hash = "sha256:ade7276b4b108df69b8480064264db856335585efe170833601f30bcaaed7bc7"},
+    {file = "executing-0.9.1-py2.py3-none-any.whl", hash = "sha256:4ce4d6082d99361c0231fc31ac1a0f56979363cc6819de0b1410784f99e49105"},
+    {file = "executing-0.9.1.tar.gz", hash = "sha256:ea278e2cf90cbbacd24f1080dd1f0ac25b71b2e21f50ab439b7ba45dd3195587"},
 ]
 flask = [
     {file = "Flask-2.1.3-py3-none-any.whl", hash = "sha256:9013281a7402ad527f8fd56375164f3aa021ecfaff89bfe3825346c24f87e04c"},
@@ -957,10 +930,6 @@ matplotlib-inline = [
     {file = "matplotlib-inline-0.1.3.tar.gz", hash = "sha256:a04bfba22e0d1395479f866853ec1ee28eea1485c1d69a6faf00dc3e24ff34ee"},
     {file = "matplotlib_inline-0.1.3-py3-none-any.whl", hash = "sha256:aed605ba3b72462d64d475a21a9296f400a19c4f74a31b59103d2a99ffd5aa5c"},
 ]
-mock = [
-    {file = "mock-4.0.3-py3-none-any.whl", hash = "sha256:122fcb64ee37cfad5b3f48d7a7d51875d7031aaf3d8be7c42e2bee25044eee62"},
-    {file = "mock-4.0.3.tar.gz", hash = "sha256:7d3fbbde18228f4ff2f1f119a45cdffa458b4c0dee32eb4d2bb2f82554bac7bc"},
-]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
     {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
@@ -1016,10 +985,6 @@ pytest-cov = [
 pytest-flask = [
     {file = "pytest-flask-1.2.0.tar.gz", hash = "sha256:46fde652f77777bf02dc91205aec4ce20cdf2acbbbd66a918ab91f5c14693d3d"},
     {file = "pytest_flask-1.2.0-py3-none-any.whl", hash = "sha256:fe25b39ad0db09c3d1fe728edecf97ced85e774c775db259a6d25f0270a4e7c9"},
-]
-pytest-mock = [
-    {file = "pytest-mock-3.8.2.tar.gz", hash = "sha256:77f03f4554392558700295e05aed0b1096a20d4a60a4f3ddcde58b0c31c8fca2"},
-    {file = "pytest_mock-3.8.2-py3-none-any.whl", hash = "sha256:8a9e226d6c0ef09fcf20c94eb3405c388af438a90f3e39687f84166da82d5948"},
 ]
 python-dotenv = [
     {file = "python-dotenv-0.20.0.tar.gz", hash = "sha256:b7e3b04a59693c42c36f9ab1cc2acc46fa5df8c78e178fc33a8d4cd05c8d498f"},
