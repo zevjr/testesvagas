@@ -1,0 +1,7 @@
+site_name: Mais Todos
+repo_url: https://github.com/josecarlosvieirajr/testesvagas/tree/master/maistodos
+repo_name: josecarlosvieirajr/maistodos
+
+theme:
+  name: material
+  language: pt-BR
