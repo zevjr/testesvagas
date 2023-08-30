@@ -1,0 +1,22 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: local
+    hooks:
+    -   id: script-lint
+        name: script-lint
+        entry: maistodos/api/scripts/lint.sh
+        language: script
+        stage: [commit]
+
+-   repo: local
+    hooks:
+    -   id: script-test
+        name: script-test
+        entry: maistodos/api/scripts/test.sh
+        language: script
+        stage: [commit]
