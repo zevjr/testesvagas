@@ -7,11 +7,12 @@ INSTALL_PYTHON=/Users/ZeJr/Library/Caches/pypoetry/virtualenvs/maistodos-api-PIT
 ARGS=(hook-impl --config=.pre-commit-config.yaml --hook-type=pre-commit)
 # end templated
 
-if [ -x "$INSTALL_PYTHON" ]; then
-    cd maistodos && exec "$INSTALL_PYTHON" -mpre_commit "${ARGS[@]}" --hook-dir .
-elif command -v pre-commit > /dev/null; then
-    exec pre-commit "${ARGS[@]}"
-else
-    echo '`pre-commit` not found.  Did you forget to activate your virtualenv?' 1>&2
-    exit 1
-fi
+# if [ -x "$INSTALL_PYTHON" ]; then
+#     cz commit
+#     cd maistodos && exec "$INSTALL_PYTHON" -mpre_commit "${ARGS[@]}" --hook-dir .
+# elif command -v pre-commit > /dev/null; then
+#     exec pre-commit "${ARGS[@]}"
+# else
+#     echo '`pre-commit` not found.  Did you forget to activate your virtualenv?' 1>&2
+#     exit 1
+# fi
