@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title=settings.service_name, root_path="/checkout")
+    app = FastAPI(title=settings.service_name)
 
     app.add_middleware(
         CORSMiddleware,
@@ -20,7 +20,7 @@ def create_app() -> FastAPI:
     )
 
 
-    app.include_router(api_router_v1, prefix='/ap1/v1')
+    app.include_router(api_router_v1, prefix='/api')
 
     logger.info(f"starting app {settings.service_name}")
 
