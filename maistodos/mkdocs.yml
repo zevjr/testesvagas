@@ -5,3 +5,17 @@ repo_name: josecarlosvieirajr/maistodos
 theme:
   name: material
   language: pt-BR
+
+plugins:
+- macros
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [api]
+
+extra:
+  rotas:
+    base_project: http://0.0.0.0:8001
+
+watch:
+  - api
