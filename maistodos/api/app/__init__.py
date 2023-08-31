@@ -1,3 +1,12 @@
+"""
+## Initialize the FastAPI application.
+Nesse modulo inicial é onde é criado o app FastAPI e adicionado os middlewares e rotas.
+
+- Para acessar as informações de configuração, basta importar o módulo `config` e acessar o atributo `settings`.
+- As rotas estão disponiveis no módulo `routes`.
+"""
+
+
 import logging
 import logging.config
 

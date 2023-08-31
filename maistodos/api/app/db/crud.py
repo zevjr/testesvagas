@@ -1,3 +1,16 @@
+"""
+Módulo de CRUD genérico para operações de banco de dados.
+
+Attributes:
+    GET: Método de leitura de dados.
+    GET_MULTI: Método de leitura de vários dados.
+    CREATE: Método de criação de dados.
+    UPDATE: Método de atualização de dados.
+    REMOVE: Método de remoção de dados.
+
+"""
+
+
 from typing import Any, Dict, Generic, List, Optional, Type, TypeVar, Union
 
 from fastapi.encoders import jsonable_encoder
