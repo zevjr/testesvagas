@@ -1,6 +1,8 @@
 import csv
-from ..models import Movie
+
 from ..database import db
+from ..models import Movie
+
 
 def load_movies_from_csv(file_path):
     with open(file_path, newline='', encoding='utf-8') as csvfile:
@@ -11,7 +13,7 @@ def load_movies_from_csv(file_path):
                 title=row['title'],
                 studios=row['studios'],
                 producers=row['producers'],
-                winner=row['winner'].lower() == 'yes'
+                winner=row['winner'].lower() == 'yes',
             )
             db.session.add(movie)
         db.session.commit()

@@ -1,5 +1,6 @@
 from ..models import Movie
 
+
 def calculate_award_intervals():
     movies = Movie.query.filter_by(winner=True).order_by(Movie.year).all()
     producers = {}
@@ -15,11 +16,13 @@ def calculate_award_intervals():
         if len(years) > 1:
             for i in range(1, len(years)):
                 interval = years[i] - years[i - 1]
-                intervals.append({
-                    'producer': producer,
-                    'interval': interval,
-                    'previousWin': years[i - 1],
-                    'followingWin': years[i]
-                })
+                intervals.append(
+                    {
+                        'producer': producer,
+                        'interval': interval,
+                        'previousWin': years[i - 1],
+                        'followingWin': years[i],
+                    }
+                )
 
     return intervals

@@ -1,7 +1,7 @@
 from flask import Flask
+
 from .config import Config
 from .database import db
-
 
 
 def create_app():
@@ -11,6 +11,7 @@ def create_app():
     db.init_app(app)
 
     from .controllers.award_controller import award_bp
+
     app.register_blueprint(award_bp)
 
     return app
