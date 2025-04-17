@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - COVERAGE_PERCENTAGE=1.0
+      - AGE_RATE_INCREMENT=0.005
+      - VALUE_RATE_INCREMENT=0.005
+      - VALUE_INCREMENT_STEP=10000
+      - MIN_GIS_ADJUSTMENT=-0.02
+      - MAX_GIS_ADJUSTMENT=0.02
+    volumes:
+      - .:/app
