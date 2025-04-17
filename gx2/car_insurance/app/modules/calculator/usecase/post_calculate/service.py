@@ -78,6 +78,9 @@ class PremiumService(BasePremiumService):
         return age_component + value_component + gis_adjustment
 
     def _calculate_gis_adjustment(self) -> float:
+        # This abstraction was created to simulate a GIS query using a database.
+        # Due to lack of time, the abstraction remained as a mock, 
+        # but it was open to the possibility of extension for the correct use of the tool.
         if not self._coverage.registration_location:
             return 0.0
 
